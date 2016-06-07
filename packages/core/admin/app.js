@@ -11,7 +11,7 @@ var Admin = new Module('admin');
  * Dependency injection is used to define required modules
  */
 
-Admin.register(function(app, auth, database, circles) {
+Admin.register(function(app, auth, database) {
 
     var icons = 'admin/assets/img/icons/';
 
