@@ -10,7 +10,7 @@
   function imscore($stateProvider) {
     $stateProvider.state('imscore example page', {
       url: '/imscore/example',
-      templateUrl: 'imscore/views/index.html'
+      templateUrl: 'imscore/views/locations.html'
     });
   }
 

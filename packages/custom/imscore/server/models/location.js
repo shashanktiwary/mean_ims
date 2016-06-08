@@ -16,9 +16,13 @@ var LocationSchema = new Schema({
         required : true,
         unique : true
     },
-    parentId : {
-        type : mongoose.Schema.Types.ObjectId,
-        ref : 'Location'
+     created: {
+        type: Date,
+        default: Date.now
+    },
+    user: {
+        type: Schema.ObjectId,
+        ref: 'User'
     }
 });
 mongoose.model('Location', LocationSchema);
