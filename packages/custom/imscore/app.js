@@ -11,11 +11,20 @@ var Imscore = new Module('imscore');
  * All MEAN packages require registration
  * Dependency injection is used to define required modules
  */
-Imscore.register(function(app, auth, database) {
+Imscore.register(function(app, auth, database, admin) {
 
+  var icons = 'admin/assets/img/icons/';
   //We enable routing. By default the Package Object is passed to the routes
   Imscore.routes(app, auth, database);
-
+  
+//   admin.menus.add({
+//         roles: ['admin'],
+//         title: 'Location',
+//         link: 'location',
+//         icon: icons + 'modules.png',
+//         menu: 'main'
+//     });
+  
   //We are adding a link to the main menu for all authenticated users
   Imscore.menus.add({
     title: 'imscore example page',
